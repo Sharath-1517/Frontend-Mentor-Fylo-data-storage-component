@@ -57,6 +57,10 @@ body {
         justify-content: space-between;
     }
 
+    label {
+        width: 100%;
+    }
+
     &-remaining {
         display: flex;
         align-items: center;
@@ -142,5 +146,9 @@ body {
             right: 50px;
         }
 
+    }
+
+    label {
+        width: 100%;
     }
 }

@@ -58,6 +58,9 @@ body {
   width: 100%;
   justify-content: space-between;
 }
+.data label {
+  width: 100%;
+}
 .data-remaining {
   display: flex;
   align-items: center;
@@ -127,5 +130,8 @@ body {
   .data-remaining {
     top: -50px;
     right: 50px;
+  }
+  label {
+    width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */
