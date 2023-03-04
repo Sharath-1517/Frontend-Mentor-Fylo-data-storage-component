@@ -1,0 +1,146 @@
+@import 'config';
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font;
+    color: white;
+}
+
+.logo-upload-section {
+    background-color: $dark-blue;
+    border-radius: 10px 100px 10px 10px;
+    padding: 30px 50px 30px 30px;
+    margin: 0 20px;
+}
+
+.icon {
+    padding: 10px;
+    background-color: $very-dark-blue;
+    border-radius: 5px;
+}
+
+.upload-icons {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 20px;
+}
+
+.cloud-img {
+    padding: 14px 10px;
+} 
+
+.data {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $dark-blue;
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin: 15px 20px;
+    position: relative;
+
+    &-usage {
+        margin-bottom: 15px;
+        font-weight: 400;
+    }
+
+    &-slider {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &-remaining {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background-color: $pale-blue;
+        top: 130px;
+        border-radius: 10px;
+        padding: 20px;
+
+        h2 {
+
+            display: flex;
+            align-items: center;
+            color: $very-dark-blue;
+
+            strong {
+                font-size: 2rem;
+            }
+
+            span {
+                margin-left: 10px;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+        }
+    }
+
+}
+
+.slider {
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        background-image: url(/images/bg-mobile.png);
+    }
+    .desktop-bg {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 377px) {
+    body {
+        background-color: $very-dark-blue;
+    }
+
+    .logo-upload-section {
+        padding-right: 150px;
+    }
+
+    .upload-icons {
+        margin-bottom: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: -230px;
+        z-index: 1;
+    }
+
+    .desktop-bg {
+        position: relative;
+        width: 100%;
+        top: 93px;
+    }
+
+    .data {
+
+        width: 80ch;
+
+        &-usage {
+            display: flex;
+            align-self: self-start;
+        }
+
+        &-remaining {
+            top: -50px;
+            right: 50px;
+        }
+
+    }
+}
